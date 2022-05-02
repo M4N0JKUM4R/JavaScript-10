@@ -1,0 +1,185 @@
+:root {
+    --primary-color: #0077c8;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: var(--primary-color);
+    display: grid;
+    place-items: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.weather-app {
+    width: 20em;
+    background: white;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.weather-app .input-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.weather-app.result-mode .input-section {
+    display: none;
+}
+
+.weather-app.input-mode .weather-section {
+    display: none;
+}
+
+.separator {
+    display: flex;
+    justify-content: center;
+    color: gray;
+    width: 80%;
+    height: 0.1em;
+    margin: 2em auto;
+    text-align: center;
+    background-color: lightgray;
+}
+
+.separator::after {
+    content: "OR";
+    background: white;
+    margin-top: -0.5em;
+    width: 3em;
+}
+
+.manual-input {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.manual-input .error-message {
+    background-color: lightcoral;
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+    border-radius: 0.25em;
+    color: white;
+    display: none;
+}
+
+.manual-input .error-message.active {
+    display: block;
+}
+
+.manual-input input {
+    width: 80%;
+    height: 3em;
+    border-radius: 0.25em;
+    text-align: center;
+    border: 1px solid lightgray;
+    outline: 0 none;
+    margi
+}
+
+.device-location {
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.weather-app .header {
+    display: flex;
+    justify-content: center;
+    color: var(--primary-color);
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 1em;
+    align-items: center;
+    gap: 1em;
+}
+
+button.location {
+    width: 80%;
+    height: 3em;
+    background: var(--primary-color);
+    outline: 0 none;
+    border: 0 none;
+    border-radius: 0.25em;
+    color: white;
+    cursor: pointer;
+}
+
+.weather-app .weather-section {
+    width: 100%;
+}
+
+/**
+ * Weather Section
+ */
+
+.weather-section .weather-details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}
+
+.weather-section .summary {
+    padding: 1em 0;
+}
+
+.weather-section img {
+    width: 4em;
+}
+
+.weather-section .temperature {
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.humidity-temp {
+    font-weight: bold;
+}
+
+.weather-section .weather-footer {
+    display: flex;
+    border-top: 1px solid lightgray;
+}
+
+.weather-footer > div {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    flex: 1 1 100%;
+}
+
+.weather-footer .feels-like {
+    border-right: 1px solid lightgray;
+}
+
+.go-back {
+    cursor: pointer;
+}
+
+.summary {
+    text-transform: capitalize;
+}
+
+.feels-like-temp {
+    font-weight: bold;
+}
+
+.feels-like-text,
+.humidity-text {
+    font-size: .75em;
+}

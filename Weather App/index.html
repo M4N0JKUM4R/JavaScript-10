@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="weather-app input-mode">
+        <section class="input-section">
+            <div class="header">
+                <h1>Weather App</h1>
+            </div>
+            <div class="manual-input">
+                <div class="error-message">Please input a valid city</div>
+                <input class="city-input" placeholder="Enter City Name" />
+            </div>
+            <div class="separator">
+            </div>
+            <div class="device-location">
+                <button class="location">
+                    Get Device Location
+                </button>
+            </div>
+        </section>
+        <section class="weather-section">
+            <div class="header">
+                <i class="fa-solid fa-arrow-left go-back"></i>
+                <h1>Weather App</h1>
+            </div>
+            <div class="weather-details">
+                <div class="weather-icon">
+                    <img src="img/8.png" />
+                </div>
+                <div class="temperature">
+                    13&deg;C
+                </div>
+                <div class="summary">
+                    Sunny
+                </div>
+                <div class="city-details">
+                    <span class="location-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </span>
+                    <span class="city-name">Chennai, India</span>
+                </div>
+            </div>
+            <div class="weather-footer">
+                <div class="feels-like">
+                    <img src="img/12.png" />
+                    <div class="text-area">
+                        <span class="feels-like-temp">17&deg;C</span>
+                        <span class="feels-like-text">Feels like</span>
+                    </div>
+                </div>
+                <div class="humidity">
+                    <img src="img/4.png" />
+                    <div class="text-area">
+                        <span class="humidity-temp"></span>
+                        <span class="humidity-text">Humidity</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
