@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: lightgray;
+    font-family: 'Roboto';
+}
+
+.notification-banner {
+    width: 20em;
+    height: 5em;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-left: 0.5em solid gray;
+    border-radius: 0.25em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all ease 1s;
+    left: 0;
+}
+
+.notification-banner.disappear {
+    position: relative;
+    left: -20em;
+    opacity: 0;
+}
+
+.notification-banner .wifi-icon {
+    background-color: gray;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-banner .close-btn {
+    width: 1.5em;
+    height: 1.5em;
+    background-color: gray;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.notification-banner.connected {
+    border-color: #89ba16;
+}
+
+.notification-banner.connected .wifi-icon {
+    background-color: #89ba16;
+}
+
+.notification-banner.connected .close-btn {
+    background-color: #89ba16;
+}
+
