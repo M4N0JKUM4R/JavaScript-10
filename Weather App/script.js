@@ -69,8 +69,8 @@ const displayResults = (results) => {
     humidityPercentage.innerText = `${results.main.humidity}%`;
     locationCity.innerText = `${results.name}, ${results.sys.country}`;
     summary.innerText = results.weather[0].description;
-    temperature.innerText = `${Math.ceil(results.main.temp)}°C`;
-    feelsLike.innerText = `${Math.ceil(results.main.feels_like)}°C`
+    temperature.innerText = `${Math.round(results.main.temp)}°C`;
+    feelsLike.innerText = `${Math.round(results.main.feels_like)}°C`
     const id = results.id;
     console.log(results.weather[0].icon);
 
