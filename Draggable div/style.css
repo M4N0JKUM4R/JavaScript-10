@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+:root {
+    --primary-color: #be0027;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: "Roboto", sans-serif;    
+    display: grid;
+    place-items: center;
+}
+
+.draggable-container {
+    position: absolute;
+}
+
+.draggable-item {
+    background: white;
+    width: 20em;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0;
+    border-radius: 0.25em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+
+.draggable-item .header {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    width: 100%;
+    text-align: left;
+    text-indent: 1em;
+    padding-bottom: 0.5em;
+    font-weight: 600;
+}
+
+.draggable-item .content {
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
+.draggable-item .header.active {
+    user-select: none;
+    cursor: move;
+}
