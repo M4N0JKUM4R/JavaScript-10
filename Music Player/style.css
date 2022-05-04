@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --primary-gradient: linear-gradient(to right, #89216B, #DA4453);
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+   background: linear-gradient(to right, #89216B, #DA4453);
+   display: grid;
+   place-items: center;
+   font-family: "Roboto", sans-serif;
+}
+
+.music-player {
+    background: white;
+    width: 20em;
+    height: 30em;
+    border-radius: 0.25em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding-bottom: 1em;
+    overflow: hidden;
+}
+
+.music-player .header {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em 0;
+}
+
+.music-player .image-area {
+    display: flex;
+    justify-content: center;
+    width: 15em;
+    height: 15em;
+    margin: 1em auto;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    overflow: hidden;
+}
+
+.music-player .image-area img {
+    
+    
+}
+
+.music-player .music-details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.music-player .music-name {
+    padding: 0.5em 0;
+    font-weight: bold;
+    width: fit-content;
+    text-align: center;
+}
+
+.music-player .progress-area {
+    margin: 1em 0;
+    padding-top: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    height: 1em;
+}
+
+.music-player .progress-area .time-area {
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+    padding-top: 0.25em;
+}
+
+.music-player .progress-bar {
+    height: 0.25em;
+    background-color: lightgray;
+    cursor: pointer;
+    transition: all ease 0.25s;
+}
+
+/* .music-player .progress-bar:hover {
+    height: 0.35em;
+} */
+
+.music-player .progress {
+    width: 0%;
+    height: 100%;
+    background: var(--primary-gradient);
+    position: relative;
+}
+
+/* .music-player .progress-bar .progress::after {
+    content: "";
+    position: absolute;
+    right: -0.1em;
+    top: 0;
+    width: 0.25em;
+    height: 0.25em;
+    border-radius: 50%;
+    background: var(--primary-gradient);
+    transition: all ease 0.5s;
+}
+
+.music-player .progress-bar:hover .progress::after {
+    width: 0.75em;
+    height: 0.75em;
+    top: -0.2em;
+    border-radius: 50%;
+    background: var(--primary-gradient);
+} */
+
+.music-player .controls {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.music-player .playback-controls {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.music-player .play-pause {
+    background: var(--primary-gradient);
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    color: white;
+    place-items: center;
+    display: grid;
+    cursor: pointer;
+}
+
+.music-player .prev {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    place-items: center;
+    display: grid;
+}
+
+.music-player .prev {
+    transform: rotate(180deg);
+}
+
+.music-player .prev, .music-player .next {
+    /* background: var(--primary-gradient); */
+    color: #89216b;
+    cursor: pointer;
+    transition: all ease 1s;
+    position: relative;
+}
+
+.music-player .prev:hover, .music-player .next:hover {
+    color: #da4453;
+}
+
+.music-player .prev:after, .music-player .next:after {
+    content: "";
+    height: 1em;
+    width: 0.1em;
+    background: var(--primary-gradient);
+    position: absolute;
+}
+
+.music-player .prev:after {
+    left: 1.5em;
+}
+
+.music-player .next:after {
+    left: 1.5em;
+}
+
+.music-player .next {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    place-items: center;
+    display: grid;
+}
+
+.music-player .playlist,
+.music-player .loop-type {
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.music-player .music-list {
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all ease 1s;
+    top: 2em;
+    position: relative;
+}
+
+.music-list .list {
+    max-height: 15em;
+    overflow-y: scroll;
+}
+
+.music-list .list::-webkit-scrollbar {
+    display: none;
+}
+
+.music-player .song {
+    font-size: 0.75em;
+    display: flex;
+    padding: 0 3em;
+    margin: 1em 0;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 1em;
+    cursor: pointer;
+}
+
+.music-player .song:hover {
+    color: #da4453;
+}
+
+.music-player .song .time {
+    text-align: center;
+}
+
+.music-player .song.playing {
+    color: #da4453;
+}
+
+.music-player .fa-close {
+    cursor: pointer;
+}

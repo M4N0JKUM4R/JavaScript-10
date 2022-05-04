@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="favicon" href="favicon.ico">
+    <script src="js/music.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <title>Music Player</title>
+</head>
+
+<body>
+    <div class="music-player">
+        <audio class="music-player" src=""></audio>
+        <div class="header">
+            <div class="expand">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="title">Now playing</div>
+            <div class="expand_hori">
+                <i class="fas fa-ellipsis-h"></i>
+            </div>
+        </div>
+        <div class="image-area">
+            <img src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/aecf4604-1d3b-417f-97c6-d5be80f51eb9/3.jpg"
+                alt="Pink Floyd" />
+        </div>
+        <div class="music-details">
+            <div class="music-name"></div>
+            <div class="music-artist"></div>
+        </div>
+        <div class="progress-area">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="time-area">
+                <div class="current-time">0:00</div>
+                <div class="duration">0:00</div>
+            </div>
+        </div>
+        <div class="controls">
+            <div class="loop-type">
+                <i class="material-icons" title="Playlist looped">repeat</i>
+            </div>
+            <div class="playback-controls">
+                <div class="prev">
+                    <i class="fas fa-play"></i>
+                </div>
+                <div class="play-pause">
+                    <i class="fas fa-play"></i>
+                </div>
+                <div class="next">
+                    <i class="fas fa-play"></i>
+                </div>
+            </div>
+            <div class="playlist">
+                <i class="fas fa-list"></i>
+            </div>
+        </div>
+        <div class="music-list">
+            <div class="header">
+                <i class="fab fa-spotify"></i>
+                <span class="title">Playlist</span>
+                <i class="fas fa-close"></i>
+            </div>
+            <div class="list">
+
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
