@@ -4,16 +4,17 @@
     --primary-gradient: linear-gradient(to right, #89216B, #DA4453);
 }
 
-html, body {
+html,
+body {
     height: 100%;
     overflow: hidden;
 }
 
 body {
-   background: linear-gradient(to right, #89216B, #DA4453);
-   display: grid;
-   place-items: center;
-   font-family: "Roboto", sans-serif;
+    background: linear-gradient(to right, #89216B, #DA4453);
+    display: grid;
+    place-items: center;
+    font-family: "Roboto", sans-serif;
 }
 
 .music-player {
@@ -42,10 +43,7 @@ body {
     overflow: hidden;
 }
 
-.music-player .image-area img {
-    
-    
-}
+.music-player .image-area img {}
 
 .music-player .music-details {
     display: flex;
@@ -149,7 +147,8 @@ body {
     transform: rotate(180deg);
 }
 
-.music-player .prev, .music-player .next {
+.music-player .prev,
+.music-player .next {
     /* background: var(--primary-gradient); */
     color: #89216b;
     cursor: pointer;
@@ -157,11 +156,13 @@ body {
     position: relative;
 }
 
-.music-player .prev:hover, .music-player .next:hover {
+.music-player .prev:hover,
+.music-player .next:hover {
     color: #da4453;
 }
 
-.music-player .prev:after, .music-player .next:after {
+.music-player .prev:after,
+.music-player .next:after {
     content: "";
     height: 1em;
     width: 0.1em;
