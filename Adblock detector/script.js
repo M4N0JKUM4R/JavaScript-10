@@ -19,13 +19,10 @@ button.addEventListener("click", () => {
     wrapper.classList.remove("show");
 })
 
-
-
 // Check for adblock 
 
 const checkAdBlocker = () => {
     if(!wrapper.classList.contains("show")) {
-        console.log("Checking")
         detectStyles === "none" ? wrapper.classList.add("show") : wrapper.classList.remove("show");
     }
 }
