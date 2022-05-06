@@ -1,13 +1,210 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --primary-font: 'Roboto', sans-serif;
+    --primary-color: #5f7fff;
+}
+
 html, body {
     height: 100%;
-    background: #5f7fff;
+    background: var(--primary-color);
     display: grid;
     place-items: center;
+    font-family: var(--primary-font);
 }
 
 .wrapper {
     background: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: max-content;
+    height: max-content;
+    padding: 2em;
+}
+
+.wrapper .header {
+    text-align: center;
+}
+
+.wrapper h1 {
+    margin-top: 0;
+}
+
+.wrapper .search-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 20em;
+}
+
+.wrapper .search-section form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 15em;
+    border: 2px solid lightgray;
+    padding: 0 1em;
+    transition: all ease 0.5s;
+}
+
+.wrapper .search-section form.active {
+    border: 2px solid var(--primary-color);
+}
+
+.wrapper .search-section form.active i {
+    color: var(--primary-color);
+}
+
+.wrapper .search-description {
+    text-align: center;
     width: 20em;
-    height: 20em;
+    height: 3em;
+    transition: height ease 0.5s;
+    color: gray;
+    transition-delay: display 2s;
+}
+
+.search-description .search-word {
+    color: black;
+    font-weight: bold;
+}
+
+.wrapper .section-meaning {
+    margin-top: 1em;
+    border-top: 1px solid lightgray;
+    padding-top: 1em;
+    max-width: 20em;
+}
+
+.section-meaning .meanings {
+    max-height: 5em;
+    overflow-y: auto;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
+}
+
+.wrapper .section-example {
+    margin-top: 1em;
+    border-top: 1px solid lightgray;
+    padding-top: 1em;
+    max-width: 20em;
+}
+
+.section-example .examples {
+    max-height: 5em;
+    overflow-y: auto;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
+}
+
+.section-example .title {
+    font-weight: bold;
+}
+
+.wrapper .section-synonym {
+    margin-top: 1em;
+    border-top: 1px solid lightgray;
+    padding-top: 1em;
+    max-width: 20em;
+}
+
+.section-example .section-synonym {
+    max-height: 5em;
+    overflow-y: auto;
+}
+
+.section-synonym .title {
+    font-weight: bold;
+}
+
+.section-synonym .synonyms {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-height: 5em;
+    overflow-y: auto;
+}
+
+.section-synonym .synonyms .synonym-tag {
+    margin-right: 0.25em;
+    color: gray;
+}
+
+
+div::-webkit-scrollbar {
+    width: 5px;
+}
+
+div::-webkit-scrollbar-track {
+    background-color: lightgrey;
+}
+
+div::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+
+.section-meaning .meanings ol,
+.section-example .examples ol {
+    padding-left: 1.5em;
+}
+
+.section-meaning .meanings li,
+.section-example .examples li {
+    margin-bottom: 0.5em;
+}
+
+.section-meaning .title {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.wrapper .search-description.hide {
+    opacity: 0;
+    height: 0;
+}
+
+.wrapper input {
+    width: 20em;
+    height: 3em;
+    padding: 0 1em;
+    border: 0 none;
+    font-family: var(--primary-font);
+}
+
+.wrapper form.focused {
+    border: 2px solid var(--primary-color);
+    border-style: inset;
+    
+}
+
+.wrapper .search-section .clear {
+    cursor: pointer;
+}
+
+.wrapper input:focus {
+    outline: none;
+}
+
+.section-main {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-main .word {
+    font-weight: bold;
+}
+
+.section-main .word .phonetic {
+    font-weight: 500;
+}
+
+.section-main .text-to-audio.no-audio {
+    opacity: 0.5;
+}
+
+.section-main .text-to-audio i {
+    cursor: pointer;
 }

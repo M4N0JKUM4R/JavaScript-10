@@ -4,13 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <title>Dictionary App</title>
 </head>
 <body>
     <div class="wrapper">
-        Dictionary Content
+        <div class="header">
+            <h1>English Dictionary</h1>
+        </div>
+        <div class="search-section">
+            <form>
+                <i class="material-icons">search</i>
+                <input type="text" id="search-input" placeholder="Search for a word...">
+                <i class="material-icons clear">close</i>
+            </form>
+            <div class="search-description">
+                <p>Type in a word and press Enter to search for it in the dictionary.</p>
+            </div>
+        </div>
+        <div class="results">
+            <div class="section-main">
+
+            </div>
+            <div class="section-synonyms">
+                
+            </div>
+        </div>
     </div>
 </body>
 </html>
